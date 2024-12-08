@@ -85,9 +85,11 @@
 | MYSQL_USER | MySQL/MariaDB连接用户名 | useSqlite3为`False`时 | 字符串 |  | 
 | MYSQL_PASSWORD | MySQL/MariaDB连接密码 | useSqlite3为`False`时 | 字符串 |  | 
 | MYSQL_DATABASE | MySQL/MariaDB数据库名称 | useSqlite3为`False`时 | 字符串 | 确保此数据库存在，程序不会创建数据库，但是会自动创建数据表 | 
-| MYSQL_CHARSET | MySQL/MariaDB数据库表字符集 | useSqlite3为`False`时 | 字符串 | 建议为`utf8mb4` | 
+| MYSQL_CHARSET | MySQL/MariaDB数据库表字符集 | useSqlite3为`False`时 | 字符串 | 建议为`utf8mb4`，改为其它值极大可能出现问题 | 
 
 ### 运行
+
+如果使用MySQL/MariaDB，确保已经创建了数据库，数据表会在运行程序时自动创建
 
 在命令行执行(注意：Linux/macOS用户可能需要将`python`改为`python3`)：
 
